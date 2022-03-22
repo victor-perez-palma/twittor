@@ -8,7 +8,7 @@ import (
 )
 
 func IntentoLogin(email string, password string) (models.Usuario, bool) {
-	usu, encontrado := ChequeoYaExisteUsuario(email)
+	usu, encontrado, _ := ChequeoYaExisteUsuario(email)
 	if encontrado == false {
 		return usu, false
 	}
